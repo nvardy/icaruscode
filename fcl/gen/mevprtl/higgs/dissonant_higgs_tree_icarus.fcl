@@ -30,6 +30,13 @@ physics:
   
 } # physics
 
-physics.producers.generator.RayTrace: @local::wgtraytrace
-
+physics.producers.generator.RayTrace: @local::mxdraytrace
+physics.producers.generator.Flux.IgnoreParentDecayTime: false
+#physics.producers.generator.Flux.GlobalTimeOffset: 0.0
+physics.producers.generator.Deweight: true
+physics.producers.generator.MesonGen.FluxCopyMethod: "IFDH"
+physics.producers.generator.MesonGen.SearchPath: "/pnfs/fnal.gov/usr/sbn/persistent/stash/physics-gputnam/numiflux/"
+#physics.producers.generator.RayMaxWeightOverride: 1.0
+physics.producers.generator.Flux.KDIFandBeamline: true
+physics.producers.generator.Flux.SpillTimeConfig: "evgb::EvtTimeFNALBeam numi"
 services.NuRandomService.policy: "random"
